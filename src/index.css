@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@source "./src";
+/* Small reset to ensure no default body margin creates whitespace around fixed navbar */
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f3f5f5;
+}
+
+/* hide scrollbars for horizontal carousels on desktop */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
