@@ -13,7 +13,7 @@ export default function Home(){
             <p className="mt-6 text-4xl md:text-6xl lg:text-7xl font-extrabold mr-10 md:mr-40 lg:mr-80" dir='rtl'>ده مود جديد!</p>
 
             <div className="mt-8 flex justify-center">
-              <button onClick={() => window.location.href="#order"} className="bg-white text-[#0D9DD3] px-10 py-1.5 rounded-[15px] font-semibold shadow">اطلب الآن</button>
+              <button onClick={() => window.location.href="#order"} className="bg-white text-[#0D9DD3] px-10 py-1.5 rounded-[15px] font-bold text-2xl shadow">اطلب الآن</button>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Home(){
       {/* products placeholder - carousel is rendered via App */}
       <section className="py-10 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl md:text-3xl font-bold text-sky-600 " dir="rtl">اللي كل الناس بتحكي عنه...</h2>
+          <h2 className="text-center text-2xl md:text-3xl font-bold text-[#0D9DD3] " dir="rtl">اللي كل الناس بتحكي عنه...</h2>
         </div>
       </section>
 

@@ -23,7 +23,7 @@ export default function MenuLinks({ active, setActive, isMobile = false, classNa
             className={itemClass}
             aria-current={isActive ? 'page' : undefined}
           >
-            <a href={link.href} className={isMobile ? 'no-underline text-white' : ''}>{link.label}</a>
+            <a href={link.href} className={isMobile ? 'no-underline text-[#ffffff]' : ''}>{link.label}</a>
           </li>
         )
       })}

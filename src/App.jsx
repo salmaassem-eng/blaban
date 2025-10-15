@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import ProductsCarousel from './components/ProductsCarousel'
 import BranchesSection from './components/BranchesSection'
+import Footer from './components/Footer'
 import img1 from './assets/1.jpg'
 import img2 from './assets/2.jpg'
 import img3 from './assets/3.jpg'
@@ -40,8 +41,9 @@ function App() {
 
         return <ProductsCarousel items={items} />
       })()}
-
        <BranchesSection />
+      <Footer />
+      
     </div>
   )
 }

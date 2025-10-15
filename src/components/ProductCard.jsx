@@ -14,7 +14,7 @@ export default function ProductCard({ image, title, price, onAdd }) {
         />
         <button
           onClick={onAdd}
-          className="absolute left-3 top-3 bg-white/90 text-sky-600 p-2 rounded-full shadow hover:scale-105 transition"
+          className="absolute left-3 top-3 bg-white/90 text-[#0D9DD3] p-2 rounded-full shadow hover:scale-105 transition"
           aria-label={`Add ${title} to cart`}
         >
           <ShoppingCartOutlinedIcon className="text-[24px] text-black cursor-pointer" />
@@ -29,7 +29,7 @@ export default function ProductCard({ image, title, price, onAdd }) {
           {title}
         </h3>
         <div className="mt-4 flex items-center justify-between">
-          <span className="text-sky-600 font-bold text-lg">{price} ج.م</span>
+          <span className="text-[#0D9DD3] font-bold text-lg">{price} ج.م</span>
           
         </div>
       </div>

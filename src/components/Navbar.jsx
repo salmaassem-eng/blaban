@@ -16,9 +16,8 @@ export default function Navbar(){
 
             {/* logo */}
             <div className="flex items-center">
-              <div className="bg-white rounded-full p-0.5 flex items-center justify-center">
-                <img src={logo} alt="B.Laban Logo" className="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 rounded-full object-cover" />
-              </div>
+                <img src={logo} alt="B.Laban Logo" className="h-20 w-20 md:h-26 md:w-26 lg:h-26 lg:w-26 rounded-full object-cover" />
+
             </div>
 
             {/* desktop links */}
@@ -41,6 +40,8 @@ export default function Navbar(){
           </div>
         </div>
       </nav>
+              <hr className="border-t border-gray-300 opacity-60 "/>
+
 
       {/* mobile menu rendered in-flow so it pushes content */}
       {mobileOpen && (

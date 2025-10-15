@@ -1,5 +1,5 @@
 import React from 'react';
-import mapImg from '../assets/map.png'; // add your map image at this path
+import mapImg from '../assets/map.jpg'; // add your map image at this path
 
 export default function BranchesMap() {
   return (
