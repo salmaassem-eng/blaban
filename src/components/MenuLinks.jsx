@@ -2,7 +2,7 @@ import React from 'react'
 
 const LINKS = [
   { id: 'home', label: 'الرئيسية', href: '#home' },
-  { id: 'menu', label: 'قائمتنا', href: '#menu' },
+  { id: 'menu', label: 'قائمتنا', href: '#order' },
   { id: 'branches', label: 'فروعنا', href: '#branches' },
   { id: 'contact', label: 'تواصل معنا', href: '#contact' },
 ]
