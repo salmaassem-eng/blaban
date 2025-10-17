@@ -6,7 +6,7 @@ import BranchesSection from './components/BranchesSection'
 import Footer from './components/Footer'
 import ReviewsGallery from './components/ReviewsGallery'
 import AdBanner from './components/AdSection'
-
+import { CartProvider } from "./components/contexts/CartContext";
 // import product images
 import img1 from './assets/1.jpg'
 import img2 from './assets/2.jpg'
@@ -20,38 +20,52 @@ import img9 from './assets/9.jpg'
 import img10 from './assets/10.jpg'
 import img11 from './assets/11.jpg'
 
+import { useCart } from "./components/contexts/CartContext";
 
 function App() {
   return (
-    <div className='p-0 m-0 flex flex-col gap-10'>
-      <div>
-        <Navbar />
-      <Home />
-      </div>
-      
- 
+    <CartProvider>
+      <MainContent />
+      <SuccessToast />
+    </CartProvider>
+  );
+}
 
-      {/* build items array with map from images */}
+// extract the rest of your content into MainContent for cleaner structure
+function MainContent() {
+  return (
+    <div className='p-0 m-0 flex flex-col '>
+      <Navbar />
+      <Home />
       {(() => {
         const images = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11]
-        const titles = ['الهبة','أرز بلبن مكسرات',' قشطوطة رايس بودينج','الفزعة شوكولاتة','كشري مانجا','قشطوطة أرز بلبن بالمانجو','شوكو برجر','ريموناتادا مانجو','كونو ايس','السج الدح امبو','قنبلة دبي']
+        const titles = ['الهبة','أرز بلبن مكسرات','قشطوطة رايس بودينج','الفزعة شوكولاتة','كشري مانجا','قشطوطة أرز بلبن بالمانجو','شوكو برجر','ريموناتادا مانجو','كونو ايس','السج الدح امبو','قنبلة دبي']
         const items = images.map((image, i) => ({
           id: i+1,
           image,
           title: titles[i] || `منتج ${i+1}`,
-          price: (i+1) * 10 + 30,
-          onAdd: () => alert(`أضفت ${titles[i] || `منتج ${i+1}`}`)
+          price: (i+1) * 10 + 30
         }))
-
         return <ProductsCarousel items={items} />
       })()}
-       <BranchesSection />
-        <ReviewsGallery />
-        <AdBanner />
+      <BranchesSection />
+      <ReviewsGallery />
+      <AdBanner />
       <Footer />
-      
     </div>
-  )
+  );
 }
 
-export default App
+// floating success toast
+function SuccessToast() {
+  const { successMessage } = useCart();
+
+  return (
+    successMessage && (
+      <div className="fixed bottom-6 right-0 md:right-6 bg-green-500 text-white px-5 py-3 rounded-lg shadow-lg animate-bounce">
+        {successMessage}
+      </div>
+    )
+  );
+}
+export default App;

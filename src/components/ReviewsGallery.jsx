@@ -20,7 +20,7 @@ export default function ReviewsGallery(){
   return (
     <section className="relative py-12 w-full">
       <div className="container mx-auto px-4">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#0D9DD3] mb-10" dir="rtl">مش إحنا اللي بنقول... الناس بتحكي</h3>
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[#046EAB] mb-10" dir="rtl">مش إحنا اللي بنقول... الناس بتحكي</h3>
       </div>
 
       <div className="relative w-full overflow-hidden mt-8">
