@@ -34,7 +34,7 @@ export default function ProductCard({ image, title, price }) {
         <img
           src={dripImg}
           alt="drip"
-          className="absolute left-0 right-0 bottom-0 translate-y-14 z-10 w-full h-14 object-cover pointer-events-none"
+          className="absolute left-0 right-0 bottom-0 translate-y-13 z-10 w-full h-14 object-cover pointer-events-none"
         />
       </article>
     </div>
